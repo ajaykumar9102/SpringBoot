@@ -16,4 +16,11 @@ public class Studentservice {
 public Student readStudentById(int val) {
 	return studentrepo.findById(val).get();
 }
+public void updateName(Student student,int val) {
+	Student existingname=readStudentById(val);
+	existingname.setName(student.getName());
+	studentrepo.save(existingname);
+}public void deleteStudentById(int val) {
+	studentrepo.deleteById(val);
+}
 }
