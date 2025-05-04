@@ -23,6 +23,7 @@ public class Ajayservice {
 		Ajay existingdata=getAjaybyId(id);
 		existingdata.setAge(ajay.getAge());
 		existingdata.setName(ajay.getName());
+		existingdata.setVikash(ajay.getVikash());
 		ajayrepo.save(existingdata);
 	}public void deletebyId(int id) {
 		ajayrepo.deleteById(id);
